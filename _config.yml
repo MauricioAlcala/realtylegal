@@ -5,7 +5,7 @@ address: Avenida Jose Haroz Aguilar \#2005 -2 Fraccionamiento Villa Turística P
 description: >- # this means to ignore newlines until "baseurl:"
   RealtyLegal promociona y vende bienes raíces, ofrecemos asesoría legal para cuidar tu inversión y otorgar la certeza jurídica patrimonial que necesitas. Promovemos la administración y venta de tus terrenos previo la mejor difusión
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://realtylegal.com.mx" # the base hostname & protocol for your site, e.g. http://example.com
 facebook_username: jekyllrb
 instagram_username:  jekyll
 
@@ -13,4 +13,4 @@ instagram_username:  jekyll
 theme: minima
 plugins:
   - jekyll-feed
-
+  - jekyll-sitemap
