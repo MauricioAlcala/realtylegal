@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-mx">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>EstateAgency Bootstrap Template - Index</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
+  {% seo %}
   {% include styles.html %}
 </head>
 
@@ -17,13 +14,15 @@
 
   {% include navbar.html %}
 
-  {% include intro.html %}
-
+  {% if page.title == "Inicio" %}
+    {% include intro.html %}
+  {% endif %}
+  
   <main id="main">
   
     {{ content }}
   
-  </main><!-- End #main -->
+  </main>
 
   {% include footer.html %}
   {% include scripts.html %}
