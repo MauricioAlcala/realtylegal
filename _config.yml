@@ -1,9 +1,9 @@
-title: Realty Legal
-email: your-email@example.com
+title: RealtyLegal
+email: marcoacg09@gmail.com
+phone: 661-124-19-62
+address: Avenida Jose Haroz Aguilar \#2005 -2 Fraccionamiento Villa Turística Playas de Rosarito
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  RealtyLegal promociona y vende bienes raíces, ofrecemos asesoría legal para cuidar tu inversión y otorgar la certeza jurídica patrimonial que necesitas. Promovemos la administración y venta de tus terrenos previo la mejor difusión
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # Build settings
