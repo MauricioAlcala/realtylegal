@@ -20,183 +20,152 @@
   
   <main id="main">
   
-    <!-- ======= Intro Single ======= -->
+<!-- ======= Intro Single ======= -->
 <section class="intro-single">
   <div class="container">
     <div class="row">
       <div class="col-md-12 col-lg-8">
         <div class="title-single-box">
-          <h1 class="title-single">{{page.title}}</h1>
-          <span class="color-text-a">{{page.ubicacion}}</span>
+          <h1 class="title-single">10 Consejos para vender tu casa</h1>
+          <span class="color-text-a">News Single.</span>
         </div>
       </div>
       <div class="col-md-12 col-lg-4">
-        <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-              <a href="index.html">Inicio</a>
-            </li>
-            <li class="breadcrumb-item">
-              <a href="propiedades.html">Propiedades</a>
-            </li>
-            <li class="breadcrumb-item active" aria-current="page">
-              {{page.title}}
-            </li>
-          </ol>
-        </nav>
+        {% include breadcrumbs.html %} 
       </div>
     </div>
   </div>
 </section><!-- End Intro Single-->
 
-
-   
-<!-- ======= Property Single ======= -->
-<section class="property-single nav-arrow-b">
+<!-- ======= Blog Single ======= -->
+<section class="news-single nav-arrow-b">
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <div id="property-single-carousel" class="swiper">
-          <div class="swiper-wrapper">
-          
-            {% for imagen in page.carrusel %}
-            <div class="carousel-item-b swiper-slide">
-              <img src="{{ imagen| relative_url }}" alt="">
-            </div>
-            {% endfor %}
-
-          </div>
-        </div>
-        <div class="property-single-carousel-pagination carousel-pagination"></div>
-      </div>
-    </div>
-
     <div class="row">
       <div class="col-sm-12">
-
-        <div class="row justify-content-between">
-          <div class="col-md-5 col-lg-4">
-            <div class="property-price d-flex justify-content-center foo">
-              <div class="card-header-c d-flex">
-                <div class="card-box-ico">
-                  <span class="bi bi-cash">$</span>
+        <div class="news-img-box">
+          <img src="assets/img/slide-3.jpg" alt="" class="img-fluid">
+        </div>
+      </div>
+      <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+        <div class="post-information">
+          <ul class="list-inline text-center color-a">
+            <li class="list-inline-item mr-2">
+              <strong>Author: </strong>
+              <span class="color-text-a">Morgan Jimenez</span>
+            </li>
+            <li class="list-inline-item mr-2">
+              <strong>Category: </strong>
+              <span class="color-text-a">Travel</span>
+            </li>
+            <li class="list-inline-item">
+              <strong>Date: </strong>
+              <span class="color-text-a">19 Apr. 2017</span>
+            </li>
+          </ul>
+        </div>
+        <div class="post-content color-text-a">
+          {{ content }}
+        </div>
+      
+        <div class="col-md-10 offset-md-1 col-lg-10 offset-lg-1">
+          <div class="title-box-d">
+            <h3 class="title-d">Comments (4)</h3>
+          </div>
+          <div class="box-comments">
+            <ul class="list-comments">
+              <li>
+                <div class="comment-avatar">
+                  <img src="assets/img/author-2.jpg" alt="">
                 </div>
-                <div class="card-title-c align-self-center">
-                  <h5 class="title-c">{{page.precio}}</h5>
+                <div class="comment-details">
+                  <h4 class="comment-author">Emma Stone</h4>
+                  <span>18 Sep 2017</span>
+                  <p class="comment-description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores reprehenderit, provident cumque
+                    ipsam temporibus maiores
+                    quae natus libero optio, at qui beatae ducimus placeat debitis voluptates amet corporis.
+                  </p>
+                  <a href="3">Reply</a>
                 </div>
-              </div>
+              </li>
+              <li class="comment-children">
+                <div class="comment-avatar">
+                  <img src="assets/img/author-1.jpg" alt="">
+                </div>
+                <div class="comment-details">
+                  <h4 class="comment-author">Oliver Colmenares</h4>
+                  <span>18 Sep 2017</span>
+                  <p class="comment-description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores reprehenderit, provident cumque
+                    ipsam temporibus maiores
+                    quae.
+                  </p>
+                  <a href="3">Reply</a>
+                </div>
+              </li>
+              <li>
+                <div class="comment-avatar">
+                  <img src="assets/img/author-2.jpg" alt="">
+                </div>
+                <div class="comment-details">
+                  <h4 class="comment-author">Ema López</h4>
+                  <span>18 Sep 2017</span>
+                  <p class="comment-description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores reprehenderit, provident cumque
+                    ipsam temporibus maiores
+                    quae natus libero optio.
+                  </p>
+                  <a href="3">Responder</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+  
+          <div class="form-comments">
+            <div class="title-box-d">
+              <h3 class="title-d"> Dejar un comentario</h3>
             </div>
-            <div class="property-summary">
+            <form class="form-a">
               <div class="row">
-                <div class="col-sm-12">
-                  <div class="title-box-d section-t4">
-                    <h3 class="title-d">Resumen</h3>
+                <div class="col-md-6 mb-3">
+                  <div class="form-group">
+                    <label for="inputName">Ingresa tu nombre</label>
+                    <input type="text" class="form-control form-control-lg form-control-a" id="inputName"
+                      placeholder="Nombre *" required>
                   </div>
                 </div>
-              </div>
-              <div class="summary-list">
-                <ul class="list">
-
-                  <li class="d-flex justify-content-between">
-                    <strong>Ubicación:</strong>
-                    <span>{{page.ubicacion}}</span>
-                  </li>
-                  <li class="d-flex justify-content-between">
-                    <strong>Tipo de propiedad:</strong>
-                    <span>{{page.tipo}}</span>
-                  </li>
-                  <li class="d-flex justify-content-between">
-                    <strong>Status:</strong>
-                    <span>{{page.status}}</span>
-                  </li>
-                  <li class="d-flex justify-content-between">
-                    <strong>Area:</strong>
-                    <span>{{page.area}}
-                      <sup>2</sup>
-                    </span>
-                  </li>
-                  <li class="d-flex justify-content-between">
-                    <strong>Camas:</strong>
-                    <span>{{page.camas}}</span>
-                  </li>
-                  <li class="d-flex justify-content-between">
-                    <strong>Baños:</strong>
-                    <span>{{page.baos}}</span>
-                  </li>
-                  <li class="d-flex justify-content-between">
-                    <strong>Estacionamiento:</strong>
-                    <span>{{page.estacionamiento}}</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-7 col-lg-7 section-md-t3">
-            <div class="row">
-              <div class="col-sm-12">
-                <div class="title-box-d">
-                  <h3 class="title-d">Descripción de la propiedad</h3>
+                <div class="col-md-6 mb-3">
+                  <div class="form-group">
+                    <label for="inputEmail1">Ingresa su email</label>
+                    <input type="email" class="form-control form-control-lg form-control-a" id="inputEmail1"
+                      placeholder="Correo *" required>
+                  </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                  <div class="form-group">
+                    <label for="inputUrl">Sitio Web</label>
+                    <input type="url" class="form-control form-control-lg form-control-a" id="inputUrl"
+                      placeholder="Website">
+                  </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                  <div class="form-group">
+                    <label for="textMessage">Ingresa su mensaje</label>
+                    <textarea id="textMessage" class="form-control" placeholder="Commentario *" name="message" cols="45"
+                      rows="8" required></textarea>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <button type="submit" class="btn btn-a">Enviar Mensaje</button>
                 </div>
               </div>
-            </div>
-            <div class="property-description">
-              
-              {{ content }}
-            
-            </div>
-            <div class="row section-t3">
-              <div class="col-sm-12">
-                <div class="title-box-d">
-                  <h3 class="title-d">Amenidades</h3>
-                </div>
-              </div>
-            </div>
-            <div class="amenities-list color-text-a">
-              <ul class="list-a no-margin">
-                {% for amenidad in page.amenidades %}
-                <li>{{amenidad}}</li>
-                {% endfor %}
-              </ul>
-            </div>
+            </form>
           </div>
         </div>
       </div>
-      <div class="col-md-10 offset-md-1">
-        <ul class="nav nav-pills-a nav-pills mb-3 section-t3" id="pills-tab" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link active" id="pills-video-tab" data-bs-toggle="pill" href="#pills-video" role="tab"
-              aria-controls="pills-video" aria-selected="true">Video</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="pills-plans-tab" data-bs-toggle="pill" href="#pills-plans" role="tab"
-              aria-controls="pills-plans" aria-selected="false">Planos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="pills-map-tab" data-bs-toggle="pill" href="#pills-map" role="tab"
-              aria-controls="pills-map" aria-selected="false">Mapa</a>
-          </li>
-        </ul>
-        <div class="tab-content" id="pills-tabContent">
-          <div class="tab-pane fade show active" id="pills-video" role="tabpanel" aria-labelledby="pills-video-tab">
-            <iframe src="{{page.video}}" width="100%" height="460" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-          </div>
-          <div class="tab-pane fade" id="pills-plans" role="tabpanel" aria-labelledby="pills-plans-tab">
-            <img src="{{page.plano | relative_url }}" alt="" class="img-fluid">
-          </div>
-          <div class="tab-pane fade" id="pills-map" role="tabpanel" aria-labelledby="pills-map-tab">
-            <iframe
-              src="{{page.mapa}}"
-              width="100%" height="460" frameborder="0" style="border:0" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-
-     {% include contacto_asesor.html %}
-
     </div>
-  </div>
-</section><!-- End Property Single-->
-  
+  </section><!-- End Blog Single-->
+
   </main>
 
   {% include footer.html %}
