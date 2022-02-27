@@ -1,3 +1,5 @@
+# set JEKYLL_ENV=production | bundle exec jekyll build
+
 title: Realty Legal
 email: <a href="mailto:contacto@realtylegal.com.mx">contacto@realtylegal.com.mx</a>
 phone: <a href="https://wa.me/+5216611241962?text=Hola Realty Legal.">+52 1 661 124 1962</a>
