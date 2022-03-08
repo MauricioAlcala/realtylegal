@@ -40,26 +40,27 @@ title: Contacto
               <div class="row">
                 <div class="col-md-6 mb-3">
                   <div class="form-group">
-                    <input type="text" name="name" class="form-control form-control-lg form-control-a"
+                    <input type="text" id="name" name="name" class="form-control form-control-lg form-control-a"
                       placeholder="Nombre" required>
                   </div>
                 </div>
                 <div class="col-md-6 mb-3">
                   <div class="form-group">
-                    <input name="email" type="email" class="form-control form-control-lg form-control-a"
+                    <input id="email" name="email" type="email" class="form-control form-control-lg form-control-a"
                       placeholder="Correo Electronico" required>
                   </div>
                 </div>
                 <div class="col-md-12 mb-3">
                   <div class="form-group">
-                    <input type="text" name="subject" class="form-control form-control-lg form-control-a"
+                    <input type="text" id="subject" name="subject" class="form-control form-control-lg form-control-a"
                       placeholder="Asunto" required>
                   </div>
                 </div>
                 <div class="col-md-12">
                   <div class="form-group">
-                    <textarea name="message" class="form-control" name="message" cols="45" rows="8"
+                    <textarea id="message" class="form-control" name="message" cols="45" rows="8"
                       placeholder="Mensaje" required></textarea>
+                      <div class="validate"></div>
                   </div>
                 </div>
                 <div class="col-md-12 my-3">
@@ -122,25 +123,25 @@ title: Contacto
                   <div class="socials-footer">
                     <ul class="list-inline">
                       <li class="list-inline-item">
-                        <a href="#" class="link-one">
+                        <a href="{{site.facebook}}" class="link-one">
                           <i class="bi bi-facebook" aria-hidden="true"></i>
                         </a>
                       </li>
-                      <li class="list-inline-item">
+                      <!--li class="list-inline-item">
                         <a href="#" class="link-one">
                           <i class="bi bi-twitter" aria-hidden="true"></i>
                         </a>
-                      </li>
+                      </li-->
                       <li class="list-inline-item">
-                        <a href="#" class="link-one">
+                        <a href="{{site.instagram}}" class="link-one">
                           <i class="bi bi-instagram" aria-hidden="true"></i>
                         </a>
                       </li>
-                      <li class="list-inline-item">
+                      <!--li class="list-inline-item">
                         <a href="#" class="link-one">
                           <i class="bi bi-linkedin" aria-hidden="true"></i>
                         </a>
-                      </li>
+                      </li-->
                     </ul>
                   </div>
                 </div>
