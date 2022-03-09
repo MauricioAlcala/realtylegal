@@ -1,15 +1,19 @@
 # set JEKYLL_ENV=production | bundle exec jekyll build
 
-title: Realty Legal - Bienes Raices y Asesoria Legal
+title: Realty Legal, Bienes Raices y Asesoria Legal
 email: <a href="mailto:contacto@realtylegal.com.mx">contacto@realtylegal.com.mx</a>
 phone: <a href="https://wa.me/+5216611241962?text=Hola Realty Legal.">+52 1 661 124 1962</a>
 address: <a href="https://goo.gl/maps/McmUkB1yvYD9QtCt7">Calle José Haros Aguilar 2005-Int 2, Villa Turística, 22707 Rosarito, B.C.</a>
 description: >- # this means to ignore newlines until "baseurl:"
-  Realty Legal promociona y vende bienes raíces, ofrecemos asesoría legal para cuidar tu inversión y otorgar la certeza jurídica patrimonial que necesitas. Promovemos la administración y venta de tus terrenos previo la mejor difusión
+  Realty Legal promociona y vende bienes raíces.<br>Ofrecemos asesoría legal para cuidar tu inversión y otorgar la certeza jurídica patrimonial que necesitas. <br>Promovemos la administración y venta de tus terrenos previo la mejor difusión.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://realtylegal.com.mx" # the base hostname & protocol for your site, e.g. http://example.com
 google_analytics: UA-221446210-1
+lang: es_mx
 
+social:
+  name: Realty Legal
+  links:
 facebook: https://www.facebook.com/RealtyLegal
 instagram: https://www.instagram.com/realtylegalbr/
 twitter: https://twitter.com/CentroRosarito
@@ -31,7 +35,6 @@ defaults:
   -
     scope:
       path: ""
-      type: "website"
     values:
       lang: "es"
       lazy: true
