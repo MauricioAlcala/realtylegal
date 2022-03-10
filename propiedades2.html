@@ -1,0 +1,77 @@
+---
+layout: default
+title: Propiedades
+---
+
+<!-- ======= Intro Single ======= -->
+<section class="intro-single">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-lg-8">
+        <div class="title-single-box">
+          <h1 class="title-single">Terrenos en venta</h1>
+          <span class="color-text-a">Tenemos el indicado para ti.</span>
+        </div>
+      </div>
+      <div class="col-md-12 col-lg-4">
+        {% include breadcrumbs.html %}
+      </div>
+    </div>
+  </div>
+</section><!-- End Intro Single-->
+
+<!-- ======= Property Grid ======= -->
+<section class="property-grid grid">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="grid-option">
+          <form>
+            <select class="custom-select">
+              <option selected>Todas</option>
+              <option value="1">New to Old</option>
+              <option value="2">En renta</option>
+              <option value="3">En venta</option>
+            </select>
+          </form>
+        </div>
+      </div>
+
+      <ul id="propiedades"></ul>
+
+
+    </div>
+</section>
+
+<script>
+  const ul = document.getElementById('propiedades');
+  const url = 'http://realtylegal.com.mx/api.php';
+
+  function createNode(element) {
+    return document.createElement(element);
+  }
+
+  function append(parent, el) {
+    return parent.appendChild(el);
+  }
+
+
+  fetch(url)
+    .then((resp) => resp.json())
+    .then(function (data) {
+      let propiedades = data.content;
+      return propiedades.map(function (propiedad) {
+        let li = createNode('li');
+        let img = createNode('img');
+        let span = createNode('span');
+        img.src = propiedad.title_image_full;
+        span.innerHTML = `${propiedad.title} ${propiedad.property_type}`;
+        append(li, img);
+        append(li, span);
+        append(ul, li);
+      })
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+</script>
