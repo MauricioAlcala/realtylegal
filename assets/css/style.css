@@ -368,8 +368,8 @@ a:hover {
   text-align: center;
 }
 .carousel-pagination .swiper-pagination-bullet {
-  width: 18px;
-  height: 10px;
+  width: 20px;
+  height: 12px;
   background-color: #555;
   margin: 0 4px;
   border-radius: 0;
@@ -873,8 +873,8 @@ a:hover {
   bottom: 50px;
 }
 .intro .swiper-pagination .swiper-pagination-bullet {
-  width: 18px;
-  height: 10px;
+  width: 20px;
+  height: 12px;
   background-color: #ffffff;
   border-radius: 0;
   opacity: 1;
