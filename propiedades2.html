@@ -23,7 +23,7 @@ title: Propiedades
 <!-- ======= Property Grid ======= -->
 <section class="property-grid grid">
   <div class="container">
-    <div class="row">
+    <div id="propiedades" class="row">
       <div class="col-sm-12">
         <div class="grid-option">
           <form>
@@ -37,14 +37,11 @@ title: Propiedades
         </div>
       </div>
 
-      <ul id="propiedades"></ul>
-
-
     </div>
 </section>
 
 <script>
-  const ul = document.getElementById('propiedades');
+  const contenedor = document.getElementById('propiedades');
   const url = 'https://realtylegal.com.mx/api.php';
 
   function createNode(element) {
@@ -55,20 +52,71 @@ title: Propiedades
     return parent.appendChild(el);
   }
 
+  function createElementFromHTML(htmlString) {
+    var div = document.createElement('div');
+    div.innerHTML = htmlString.trim();
+
+    // Change this to div.childNodes to support multiple top-level nodes.
+    return div.firstChild;
+  }
 
   fetch(url)
     .then((resp) => resp.json())
     .then(function (data) {
       let propiedades = data.content;
       return propiedades.map(function (propiedad) {
-        let li = createNode('li');
-        let img = createNode('img');
-        let span = createNode('span');
-        img.src = propiedad.title_image_full;
-        span.innerHTML = `${propiedad.title} ${propiedad.property_type}`;
-        append(li, img);
-        append(li, span);
-        append(ul, li);
+
+        let template = `<div class="col-md-4">
+        <div class="card-box-a card-shadow">
+          <div class="img-box-a">
+            <img src="${propiedad.title_image_full}" alt="" class="img-a img-fluid">
+          </div>
+          <div class="card-overlay">
+            <div class="card-overlay-a-content">
+              <div class="card-header-a">
+                <h2 class="card-title-a">
+                <a href="{propiedad.url}" class="text-capitalize">${propiedad.title.toLowerCase()}</a>
+                </h2>
+              </div>
+              <div class="card-body-a">
+                <div class="price-box d-flex">
+                <span class="price-a">${propiedad.property_type} | ${propiedad.operations[0].formatted_amount}</span>
+                </div>
+                <a href="{propiedad.url}" class="link-a">Clic Ver más detalles
+                  <span class="bi bi-chevron-right"></span>
+                </a>
+              </div>
+              <div class="card-footer-a">
+                <ul class="card-info d-flex justify-content-around">
+                  <li>
+                    <h4 class="card-info-title">Area</h4>
+                    <span>${propiedad.lot_size}
+                      m<sup>2</sup>
+                    </span>
+                  </li>
+                  <li class="bedrooms ${propiedad.property_type.toUpperCase() == 'TERRENO'?'d-none':''}">
+                    <h4 class="card-info-title">Camas</h4>
+                    <span>${propiedad.bedrooms}</span>
+                  </li>
+                  <li class="bathrooms ${propiedad.property_type.toUpperCase() == 'TERRENO'?'d-none':''}">
+                    <h4 class="card-info-title">Baños</h4>
+                    <span>${propiedad.bathrooms}</span>
+                  </li>
+                  <li class="parking ${propiedad.property_type.toUpperCase() == 'TERRENO'?'d-none':''}">
+                    <h4 class="card-info-title">Estacionamiento</h4>
+                    <span>${propiedad.parking_spaces}</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>`;
+
+        let div = createElementFromHTML(template);
+
+        append(contenedor, div);
+
       })
     })
     .catch(function (error) {
