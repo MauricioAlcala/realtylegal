@@ -5,7 +5,8 @@ email: <a href="mailto:contacto@realtylegal.com.mx">contacto@realtylegal.com.mx<
 phone: <a href="https://wa.me/+5216611241962?text=Hola Realty Legal.">+52 1 661 124 1962</a>
 address: <a href="https://goo.gl/maps/McmUkB1yvYD9QtCt7">Calle José Haros Aguilar 2005-Int 2, Villa Turística, 22707 Rosarito, B.C.</a>
 description: >- # this means to ignore newlines until "baseurl:"
-  Realty Legal promociona y vende bienes raíces.<br>Ofrecemos asesoría legal para cuidar tu inversión y otorgar la certeza jurídica patrimonial que necesitas. <br>Promovemos la administración y venta de tus terrenos previo la mejor difusión.
+  Realty Legal promociona y vende bienes raíces.<br>Ofrecemos asesoría legal para cuidar tu inversión y otorgar la certeza jurídica patrimonial que necesitas.
+keywords: "RealtyLegal, Realty, Legal, BienesRaices, PlayasdeRosarito, Rosarito, Venta, RentaRealty Legal promociona y vende bienes raíces.<br>Ofrecemos asesoría legal para cuidar tu inversión y otorgar la certeza jurídica patrimonial que necesitas."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://realtylegal.com.mx" # the base hostname & protocol for your site, e.g. http://example.com
 google_analytics: UA-221446210-1

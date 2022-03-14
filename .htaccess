@@ -4,7 +4,7 @@ RewriteEngine on
 RewriteOptions inherit
 RewriteCond %{HTTPS} off
 RewriteCond %{HTTP:X-Forwarded-SSL} !on
-RewriteCond %{HTTP_HOST} ^realtylegal\.com.mx$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.realtylegal\.com.mx$
-RewriteRule ^/?$ "https\:\/\/realtylegal\.com.mx\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^realtylegal\.com\.mx$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.realtylegal\.com\.mx$
+RewriteRule ^/?$ "https\:\/\/realtylegal\.com\.mx\/" [R=301,L]
 
