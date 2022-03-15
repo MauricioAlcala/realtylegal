@@ -32,10 +32,10 @@ title: Propiedad
         <div class="row justify-content-center">
           <div class="col-lg-8">
             <div id="property-single-carousel" class="swiper">
-              <div class="swiper-wrapper">
-                <div id="corrusel" class="carousel-item-b swiper-slide">
-                  <!-- Aqui van las imagens de la propiedad -->
-                </div>
+              <div id="corrusel" class="swiper-wrapper">
+
+                <!-- Aqui van las imagens de la propiedad -->
+
               </div>
             </div>
             <div class="property-single-carousel-pagination carousel-pagination"></div>
@@ -59,40 +59,39 @@ title: Propiedad
   {% include scripts.html %}
 
   <script>
+    (function () {
+      "use strict";
+      const params = new Proxy(new URLSearchParams(window.location.search), {
+        get: (searchParams, prop) => searchParams.get(prop),
+      });
 
-    const params = new Proxy(new URLSearchParams(window.location.search), {
-      get: (searchParams, prop) => searchParams.get(prop),
-    });
+      let propertyId = params.id;
 
-    let propertyId = params.id; 
-    console.log(propertyId);
-    const introSecction = document.getElementById('intro');
-    const corrusel = document.getElementById('corrusel');
-    const descripcion = document.getElementById('descripcion');
-    const url = `https://realtylegal.com.mx/api-propiedad.php?propiedadId=${propertyId}`;
+      const introSecction = document.getElementById('intro');
+      const corrusel = document.getElementById('corrusel');
+      const descripcion = document.getElementById('descripcion');
+      const url = `https://realtylegal.com.mx/api-propiedad.php?propiedadId=${propertyId}`;
 
-    function createNode(element) {
-      return document.createElement(element);
-    }
+      function createNode(element) {
+        return document.createElement(element);
+      }
 
-    function append(parent, el) {
-      return parent.appendChild(el);
-    }
+      function append(parent, el) {
+        return parent.appendChild(el);
+      }
 
-    function createElementFromHTML(htmlString) {
-      var div = document.createElement('div');
-      div.innerHTML = htmlString.trim();
-      // Change this to div.childNodes to support multiple top-level nodes.
-      return div.firstChild;
-    }
+      function createElementFromHTML(htmlString) {
+        var div = document.createElement('div');
+        div.innerHTML = htmlString.trim();
+        // Change this to div.childNodes to support multiple top-level nodes.
+        return div.firstChild;
+      }
 
-    fetch(url)
-      .then((resp) => resp.json())
-      .then(function (data) {
-        console.log(data);
-
-        //Titulo
-        let intro = `<div class="container">
+      fetch(url)
+        .then((resp) => resp.json())
+        .then(function (data) {
+          //Titulo
+          let intro = `<div class="container">
         <div class="row">
           <div class="col-md-12 col-lg-8">
             <div class="title-single-box">
@@ -117,22 +116,25 @@ title: Propiedad
           </div>
         </div>
       </div>`;
-        let sectionIntro = createElementFromHTML(intro);
-        append(introSecction, sectionIntro);
+          let sectionIntro = createElementFromHTML(intro);
+          append(introSecction, sectionIntro);
 
-        // Carrousel
-        let imagenes = data.property_images;
-        let i = imagenes.map(function (imagen) {
-          let img = createNode('img');
-          img.src = imagen.url;
-          img.alt = imagen.title;
-          img.className = 'img-fluid';
-          append(corrusel, img);
-        });
+          // Carrousel
+          let imagenes = data.property_images;
+          let i = imagenes.map(function (imagen) {
+            let div = createNode('div');
+            div.className = 'carousel-item-b swiper-slide';
+            let img = createNode('img');
+            img.src = imagen.url;
+            img.alt = imagen.title;
+            img.className = 'img-fluid';
+            append(div, img);
+            append(corrusel, div);
+          });
 
-        //Descripcion
-        let descripcionTemplate =
-          `<div class="row justify-content-between">
+          //Descripcion
+          let descripcionTemplate =
+            `<div class="row justify-content-between">
           <div class="col-md-5 col-lg-4">
             <div class="property-price d-flex justify-content-center foo">
               <div class="card-header-c d-flex">
@@ -220,14 +222,32 @@ title: Propiedad
         </div>`;
 
 
-        let descripcionElement = createElementFromHTML(descripcionTemplate);
-        append(descripcion, descripcionElement);
+          let descripcionElement = createElementFromHTML(descripcionTemplate);
+          append(descripcion, descripcionElement);
 
-      })
-      .catch(function (error) {
-        console.log(error);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+
+      /**
+       * Property Single carousel
+       */
+      new Swiper('#property-single-carousel', {
+        speed: 600,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false
+        },
+        pagination: {
+          el: '.property-single-carousel-pagination',
+          type: 'bullets',
+          clickable: true
+        }
       });
 
+    })()      
   </script>
 </body>
 
