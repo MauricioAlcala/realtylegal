@@ -75,14 +75,14 @@ title: Propiedades
             <div class="card-overlay-a-content">
               <div class="card-header-a">
                 <h2 class="card-title-a">
-                <a href="{propiedad.url}" class="text-capitalize">${propiedad.title.toLowerCase()}</a>
+                <a href="${'propiedad.html?id='+ propiedad.public_id}" class="text-capitalize">${propiedad.title.toLowerCase()}</a>
                 </h2>
               </div>
               <div class="card-body-a">
                 <div class="price-box d-flex">
                 <span class="price-a">${propiedad.property_type} | ${propiedad.operations[0].formatted_amount}</span>
                 </div>
-                <a href="{propiedad.url}" class="link-a">Clic Ver más detalles
+                <a href="${'propiedad.html?id='+ propiedad.public_id}" class="link-a">Clic Ver más detalles
                   <span class="bi bi-chevron-right"></span>
                 </a>
               </div>

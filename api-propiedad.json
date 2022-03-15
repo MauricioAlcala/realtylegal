@@ -1,0 +1,78 @@
+{
+    "public_id": "EB-GM5877",
+    "title": "SE VENDE PROPIEDAD EN FRACCIONAMIENTO REFORMA (PLAYAS DE ROSARITO)",
+    "description": "Superficie 200.00 m2\nCuenta con Barda Perimetral\nTerreno plano\nA 3 minutos de la Playa\nA 3 minutos de Plaza Pabellon\nDocumentación en regla\nZona segura\nA una cuadra del Blvd. Principal",
+    "bedrooms": null,
+    "bathrooms": null,
+    "half_bathrooms": null,
+    "parking_spaces": null,
+    "lot_size": 200,
+    "construction_size": 0,
+    "lot_length": 20,
+    "lot_width": 10,
+    "floors": null,
+    "floor": null,
+    "age": null,
+    "internal_id": null,
+    "expenses": null,
+    "location": {
+        "name": "Reforma, Playas de Rosarito, Baja California",
+        "latitude": 32.382168842,
+        "longitude": -117.0744011924,
+        "street": "Blvd emiliano zapata",
+        "postal_code": "22710",
+        "show_exact_location": true,
+        "hide_exact_location": false
+    },
+    "property_type": "Terreno",
+    "created_at": "2021-01-16T09:43:11-06:00",
+    "updated_at": "2021-01-16T09:48:27-06:00",
+    "published_at": "2021-01-16T09:48:27-06:00",
+    "operations": [
+        {
+            "type": "sale",
+            "amount": 45000,
+            "currency": "USD",
+            "formatted_amount": "US$ 45,000",
+            "unit": "total"
+        }
+    ],
+    "property_files": [],
+    "videos": [],
+    "virtual_tour": null,
+    "collaboration_notes": null,
+    "public_url": "https://www.easybroker.com/mx/inmueble/se-vende-propiedad-en-fraccionamiento-reforma-playas-de-rosarito",
+    "tags": [],
+    "show_prices": true,
+    "property_images": [
+        {
+            "title": "",
+            "url": "https://assets.easybroker.com/property_images/1955877/29937259/EB-GM5877.jpg?version=1610811969"
+        },
+        {
+            "title": "",
+            "url": "https://assets.easybroker.com/property_images/1955877/29937258/EB-GM5877.jpg?version=1610811969"
+        },
+        {
+            "title": "",
+            "url": "https://assets.easybroker.com/property_images/1955877/29937260/EB-GM5877.jpg?version=1610811969"
+        },
+        {
+            "title": "",
+            "url": "https://assets.easybroker.com/property_images/1955877/29937261/EB-GM5877.png?version=1610811969"
+        },
+        {
+            "title": "",
+            "url": "https://assets.easybroker.com/property_images/1955877/29937262/EB-GM5877.jpg?version=1610811969"
+        }
+    ],
+    "agent": {
+        "id": 602567,
+        "name": "Marco Aurelio Castañeda Garcia",
+        "full_name": "Marco Aurelio Castañeda Garcia",
+        "mobile_phone": "+5216611241962",
+        "profile_image_url": "https://assets.easybroker.com/profile_images/602567/PicsArt_11-21-04.47.18__scaled_.jpg",
+        "email": "marcoacg09@gmail.com"
+    },
+    "features": []
+}
