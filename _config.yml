@@ -44,3 +44,12 @@ defaults:
         height: 512
         width: 512
       author: Rosarito Centro 
+
+
+exclude:
+  - blog-single.html
+  - agent-single.html
+  - api.json
+  - api-propiedad.json
+  - property-single.html
+  - propiedades-jekyll.html

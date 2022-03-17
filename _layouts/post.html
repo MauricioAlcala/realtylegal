@@ -26,8 +26,8 @@
     <div class="row">
       <div class="col-md-12 col-lg-8">
         <div class="title-single-box">
-          <h1 class="title-single">10 Consejos para vender tu casa</h1>
-          <span class="color-text-a">News Single.</span>
+          <h1 class="title-single">{{page.title}}</h1>
+          <span class="color-text-a">Blog</span>
         </div>
       </div>
       <div class="col-md-12 col-lg-4">
@@ -43,23 +43,23 @@
     <div class="row">
       <div class="col-sm-12">
         <div class="news-img-box">
-          <img src="assets/img/slide-3.jpg" alt="" class="img-fluid">
+          <img src="{{page.imagen}}" alt="" class="img-fluid">
         </div>
       </div>
-      <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+      <div class="col-md-12 offset-md-1 col-lg-8 offset-lg-2">
         <div class="post-information">
           <ul class="list-inline text-center color-a">
             <li class="list-inline-item mr-2">
-              <strong>Author: </strong>
-              <span class="color-text-a">Morgan Jimenez</span>
+              <strong>Autor: </strong>
+              <span class="color-text-a">{{page.author}}</span>
             </li>
             <li class="list-inline-item mr-2">
-              <strong>Category: </strong>
-              <span class="color-text-a">Travel</span>
+              <strong>Categoria: </strong>
+              <span class="color-text-a">{{page.category}}</span>
             </li>
             <li class="list-inline-item">
-              <strong>Date: </strong>
-              <span class="color-text-a">19 Apr. 2017</span>
+              <strong>Fecha: </strong>
+              <span class="color-text-a">{{page.date}}</span>
             </li>
           </ul>
         </div>
@@ -67,7 +67,7 @@
           {{ content }}
         </div>
       
-        <div class="col-md-10 offset-md-1 col-lg-10 offset-lg-1">
+        <!-- <div class="col-md-10 offset-md-1 col-lg-10 offset-lg-1">
           <div class="title-box-d">
             <h3 class="title-d">Comments (4)</h3>
           </div>
@@ -161,7 +161,7 @@
               </div>
             </form>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section><!-- End Blog Single-->
