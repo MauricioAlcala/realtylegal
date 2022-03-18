@@ -17,45 +17,9 @@
     </div>
 
     <div id="property-carousel" class="swiper">
-      <div class="swiper-wrapper">
+      <div id="propiedades" class="swiper-wrapper">
 
-        {% for post in site.categories.property %}
-        <div class="carousel-item-b swiper-slide">
-          <div class="card-box-a card-shadow">
-            <div class="img-box-a">
-              <img src="{{post.imagen}}" alt="" class="img-a img-fluid">
-            </div>
-            <div class="card-overlay">
-              <div class="card-overlay-a-content">
-                <div class="card-header-a">
-                  <h2 class="card-title-a">
-                    <a href="{{post.url}}">{{post.title}}</a>
-                  </h2>
-                </div>
-                <div class="card-body-a">
-                  <div class="price-box d-flex">
-                    <span class="price-a">{{post.status}} | {{post.precio}} </span>
-                  </div>
-                  <a href="{{post.url}}" class="link-a">Ver detalles
-                    <span class="bi bi-chevron-right"></span>
-                  </a>
-                </div>
-                <div class="card-footer-a">
-                  <ul class="card-info d-flex justify-content-around">
-                    
-                    <li>
-                      <h4 class="card-info-title">Area</h4>
-                      <span>{{post.area}}<sup>2</sup>
-                      </span>
-                    </li>
-                    
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div><!-- End carousel item -->
-        {% endfor %}
+      
        
       </div>
     </div>
